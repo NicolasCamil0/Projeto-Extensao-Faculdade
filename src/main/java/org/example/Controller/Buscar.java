@@ -19,4 +19,6 @@ public class Buscar {
     public ResponseEntity<String> perguntar (@RequestParam(name = "texto") String texto){
         return ResponseEntity.ok(seekService.chamadaApiSeek(texto));
     }
+
+    //Testendo gitHub
 }
