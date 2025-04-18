@@ -1,2 +1,2 @@
 # Projeto Extensao Faculdade
- Projeto de API que retorna respostas para perguntas relacionadas a excel, parecido com um chatGPT
+Pagina desenvolvida em Java,HTML,CSS E JavaScript com o objetivo de fornecer respostas automatizadas para dúvidas relacionadas ao Microsoft Excel. Inspirada no funcionamento de assistentes virtuais como o ChatGPT, a aplicação utiliza uma base de conhecimento estruturada para interpretar perguntas dos usuários e retornar orientações precisas, comandos, fórmulas e boas práticas dentro do Excel.
