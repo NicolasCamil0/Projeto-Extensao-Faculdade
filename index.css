@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Helvetica';
+    src: url(fonts/HelveticaLTStd-Roman.ttf) format(TrueType);
+}
+@font-face {
+    font-family: 'HelveticaLight';
+    src: url(fonts/HelveticaLTStd-LightObl.ttf) format(TrueType);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    background-color: #030303;
+}
+
+.caixa {
+    display: flex;
+    background-color: #101010;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 20px;
+    padding: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+    height: 60px;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+}
+
+.img1s{
+    width: 250px; 
+    height: 250px;
+    vertical-align: middle; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 120px;
+    margin-top: 130px;
+}
+
+.tituloCabeça{
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.CaixaChat{
+    border-radius: 19px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.inputChat {
+    display: flex;
+    height: 70px;
+    width: 650px;
+    text-decoration: none;
+    align-items: center;
+    box-shadow: 0 0 0 0.5px #4d4d4d;
+    background-color: #101010;
+    text-align: center;
+    border: none;
+    vertical-align: middle;
+    border-radius: 20px;
+    color: #ffffff; 
+}
+
+.inputChat::placeholder {
+    color: #ffffff; 
+}
+
+.logo {
+    width: 140px; 
+    height: auto;
+    vertical-align: middle; 
+}
+
+.Chat{
+    margin-top: 100px;
+
+}
+
+.HelpBox{
+    font-family: 'HelveticaLight', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 4px;
+
+}
+
+.botaoChat{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #4d4d4d;
+    border: none;
+}
+
+.CaixaTextoDecorativa{
+    background-color: #101010;
+    box-shadow: 0 0 0 0.5px #4d4d4d;
+    display: flex;
+    height: 300px;
+    width: 250px;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 12px;
+    margin-left: 80px;
+
+}
+
+.CaixaTextoDecorativa0{
+    background-color: #101010;
+    box-shadow: 0 0 0 0.5px #4d4d4d;
+    display: flex;
+    height: 150px;
+    width: 450px;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 12px;
+    display: flex;
+    margin-left: 1100px;
+    margin-top: 20px;
+
+
+
+}
+
+.textoExcel{
+    font-family: 'Helvetica';
+    color: #dcdcdc;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 11px;
+    line-height: 1.8;
+    font-size: 12px;
+    height: 200px;
+    width: 300px;
+    margin-right: -120px;
+}
+
+.textoExcel1{
+    font-family: 'Helvetica';
+    color: #dcdcdc;
+    text-align: left;
+    padding: 11px;
+    line-height: 1.8;
+    font-size: 12px;
+    height: 100px;
+    width: 150px;
+    margin-top: 200px;
+}
+
+.textoExcel01{
+    font-family: 'Helvetica';
+    color: #dcdcdc;
+    text-align: left;
+    padding: 11px;
+    line-height: 1.8;
+    font-size: 12px;
+    width: 450px;
+    height: 75px;
+
+
+}
+
+.textoExcel02{
+    font-family: 'Helvetica';
+    color: #dcdcdc;
+    text-align: left;
+    padding: 11px;
+
+    line-height: 1.8;
+    font-size: 12px;
+    width: 300px;
+    height: 75px;
+    margin-top: 75x;
+}
