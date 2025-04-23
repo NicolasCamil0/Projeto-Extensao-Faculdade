@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PaginaChat</title>
+  <link rel="stylesheet" href="pag2.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+<main class="mainWrapper">
+  <aside class="historico">
+    <nav class="menuLinks">
+      <a href="#" class="linkMenu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Excelify</span>
+      </a>
+  
+      <a href="#" class="linkMenu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"/>
+          <polygon points="10 8 16 12 10 16 10 8"/>
+        </svg>
+        <span>Vídeos</span>
+      </a>
+  
+      <a href="#" class="linkMenu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="16" x2="12" y2="12"/>
+          <line x1="12" y1="8" x2="12" y2="8"/>
+        </svg>
+        <span>Sobre</span>
+      </a>
+    </nav>
+  
+    <h2 class="tituloDicas">Dicas Rápidas</h2>
+    <ul class="dicasLista">
+      <li onclick="enviarMensagem('Como fazer tabela dinâmica?')">Tabela Dinâmica</li>
+      <li onclick="enviarMensagem('Como usar a função PROCV?')">Função PROCV</li>
+      <li onclick="enviarMensagem('Quais são os atalhos mais usados no Excel?')">Atalhos úteis</li>
+      <li onclick="enviarMensagem('Como aplicar validação de dados no Excel?')">Validação de Dados</li>
+      <li onclick="enviarMensagem('Como congelar linhas e colunas?')">Congelar Linhas</li>
+      <li onclick="enviarMensagem('Como usar formatação condicional?')">Formatação Condicional</li>
+      <li onclick="enviarMensagem('Como proteger uma planilha?')">Proteger Planilha</li>
+    </ul>
+  </aside>
+
+  <section class="chatContainer">
+    <div class="DivLogoChat">
+      <img src="imgs/Exereu.png" alt="LogoExeru" class="LogoChat">
+    </div>
+    <div class="mensagens">
+      <div class="message botMessage">Olá! Em que posso ajudar?</div>
+      <div class="message userMessage">Quero aprender Excel!</div>
+    </div>
+    <div class="inputArea">
+      <input type="text" placeholder="Digite sua mensagem..." />
+      <button>➤</button>
+    </div>
+  </section>
+
+</main>
+
+
+<script src="back.js"></script>
+
+</body>
+</html>
