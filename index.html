@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>    
+    <div class="caixa"> 
+        <ul>
+            <a href=""><img src="imgs/Exereu.png" alt="LogoExcelify" class="logo"></a>
+            <a href="pag2.html" class="tituloCabeça">Chat</a>
+            <a href="#" class="tituloCabeça">Vídeos</a>
+            <a href="#" class="tituloCabeça">Sobre</a>
+        </ul>
+    </div>
+
+    <div class="CaixaTextoDecorativa0">
+        <p class="textoExcel01">“O Excel é a ferramenta mais poderosa já criada para transformar dados em decisões inteligentes, rápidas e estratégicas. Ele permite que qualquer pessoa, com poucos cliques, transforme informações brutas em insights valiosos para o dia a dia pessoal ou profissional.” <br><br>— Charles Williams, especialista em Excel e desenvolvedor MVP da Microsoft</p>
+    </div>
+
+    <main>
+        <div class="Chat">
+            <div class="HelpBox">
+                <h1>Transformando seus dados em soluções</h1>
+            </div>
+            
+            <div class="CaixaChat">
+                <input type="text" class="inputChat" placeholder="Digite sua mensagem aqui..." id="chatInput">
+            </div>
+        </div>
+
+        <div class="CaixaTextoDecorativa">
+            <p class="textoExcel">“João da equipe TechHelp é um verdadeiro mago do Excel! Sua abordagem profissional, paciente e criativa tornou o processo de organizar nossos dados algo prazeroso.”</p>
+            <p class="textoExcel1">— Carla Mendes, Setor Financeiro da InovaTech</p>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('chatInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                window.location.href = "pag2.html";  // Redireciona para a página do chat
+            }
+        });
+    </script>
+
+    <script src="back.js"></script>
+</body>
+</html>
