@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatContainer = document.querySelector(".chatContainer .mensagens"); 
     const button = document.querySelector(".inputArea button"); 
     
-    
+    // hahahahaha
     const apiBase = window.location.hostname.includes("localhost")
         ? "http://localhost:8080"
         : "https://projeto-extensao-faculdade.onrender.com";
