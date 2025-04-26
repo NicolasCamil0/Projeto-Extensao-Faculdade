@@ -19,7 +19,7 @@ import java.util.List;
 
 @Service
 public class SeekService {
-    @Value("${DeepApiKey}") // Certifique-se que está no application.properties
+    @Value("${DeepApiKey}")
     private String api_key;
 
     private final RestTemplate restTemplate;
