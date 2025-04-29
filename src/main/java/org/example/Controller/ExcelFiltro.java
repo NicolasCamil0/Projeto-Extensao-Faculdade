@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 @Component
 public class ExcelFiltro {
-    private final List<String> keywords = Arrays.asList("excel", "planilha", "tabela dinamica", "macro", "fórmula", "coluna", "linha");
+    private final List<String> keywords = Arrays.asList( "excel", "planilha", "tabela dinamica", "macro", "fórmula", "coluna", "linha", "resuma", "explique");
 
     public boolean eExcel(String texto){
         String lowerText = texto.toLowerCase();
