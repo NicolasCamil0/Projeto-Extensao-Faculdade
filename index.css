@@ -8,6 +8,30 @@
     src: url(fonts/HelveticaLTStd-LightObl.ttf) format(TrueType);
 }
 
+@font-face {
+    font-family: 'HelveticaBold';
+    src: url(fonts/HelveticaLTStd-Bold.ttf) format(TrueType);
+}
+
+@media (max-width: 768px) {
+    .BoxMain {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ModeloTexto {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .ExcelImage {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -17,64 +41,108 @@
 body {
     font-family: 'Arial', sans-serif;
     font-size: 16px;
-    background-color: #030303;
+    
 }
 
 .caixa {
     display: flex;
-    background-color: #101010;
+    background-color: #ffffff;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     gap: 20px;
     padding: 10px;
     padding-bottom: 10px;
     margin: 0px;
-    height: 60px;
-    border-bottom: 1px solid white;
-    border-radius: 5px;
+    height: 90px;
+    box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    position: relative;
+    text-align: right;
 }
 
-.img1s{
-    width: 250px; 
-    height: 250px;
-    vertical-align: middle; 
+.ExcelImage{
+    margin-left: 320px;
+}
+
+.EfeitoImagem01{
+    margin-left: -30px;
+    position: relative;
+    z-index: 2;
+}
+
+.imagemExcel{
+    width: 350px; 
+    height: 350px;
+    vertical-align: center; 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 120px;
-    margin-top: 130px;
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+   
 }
 
-.tituloCabeça{
-    margin: 10px;
-    text-decoration: none;
-    color: white;
-}
-
-.CaixaChat{
-    border-radius: 19px;
+.BoxMain{
     display: flex;
-    justify-content: center;
+    height: auto;
+    width: 100%;
+    max-width: 900px;
+}
+
+.Texto01{
+    font-family: 'HelveticaBold', sans-serif;
+    color: #385723;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    height: auto;
+}
+
+.Texto02{
+    font-family: 'HelveticaBold', sans-serif;
+    color: #385723;  
+    font-size: 18px;
+    margin-top: 0; 
+    margin-left: 0; 
+}
+
+.Texto03{
+    font-family: 'HelveticaBold', sans-serif;
+    color: #385723;  
+    font-size: 18px;
+    margin-top: 0; 
+    margin-left: 0;
+    padding-top: 30px; 
 
 }
 
-.inputChat {
-    display: flex;
-    height: 70px;
-    width: 650px;
-    text-decoration: none;
-    align-items: center;
-    box-shadow: 0 0 0 0.5px #4d4d4d;
-    background-color: #101010;
-    text-align: center;
+.Chat{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    font-size: 18px;
+    margin-top: 10px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
     border: none;
-    vertical-align: middle;
-    border-radius: 20px;
-    color: #ffffff; 
+    width: 500px;
+    height: 35px;
+    border-radius: 30px;
+    text-align: center; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    width: 80%;
+    max-width: 500px;
+
 }
 
-.inputChat::placeholder {
-    color: #ffffff; 
+.ModeloTexto {
+    height: auto;
+    width: 700px; 
+    padding-top: 30px;
+    margin-left: 30px; 
+    text-align: left; 
+
 }
 
 .logo {
@@ -83,142 +151,251 @@ body {
     vertical-align: middle; 
 }
 
-.Chat{
-    margin-top: 100px;
+.CaixaTextoDecorativa{
+    background-color: #ffffff;
+    display: flex;
+    height: max-content;
+    width: max-content;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+    height: 500px;
+    width: 100%;
+    
 
 }
 
-.HelpBox{
-    font-family: 'HelveticaLight', sans-serif;
+.procuraVideos{
+    font-family: 'HelveticaBold', sans-serif;
+    font-size: 16px;
+    height: auto;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-top: 20px;
+    background-color: #D9D9D9;
+    border: none;
+    height: 30px;
+    width: 300px;
+    padding-left: 10px;
+    
+}
+
+
+.CaixaTextoDecorativa0{
+    background-color: #E7E6E6;
+    box-shadow: 0 0 0 0.5px #4d4d4d;
+    display: flex;
+    height: 400px;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.Efeito01{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    z-index: 20;
+
+}
+
+@media (max-width: 768px) {
+    .BoxMain {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .ModeloTexto {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .ExcelImage {
+        margin-left: 0;
+        margin-top: 20px;
+        max-width: 100%;  /* Adicionando isso para tornar a imagem responsiva */
+        height: auto;
+    }
+
+    .imagemExcel {
+        width: 100%; /* Ajuste para que a imagem se ajuste automaticamente */
+        max-width: 350px;  /* Limite máximo para a largura da imagem */
+        height: auto;
+    }
+
+    .caixa {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .Chat {
+        width: 90%;
+        max-width: 400px;
+        font-size: 16px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+.caixa {
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 20px;
+    padding: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+    height: 90px;
+    box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    position: relative;
+    text-align: right;
+}
+
+.ExcelImage {
+    margin-left: 320px;
+}
+
+.EfeitoImagem01 {
+    margin-left: -30px;
+    position: relative;
+    z-index: 2;
+}
+
+.imagemExcel {
+    width: 350px;
+    height: 350px;
+    vertical-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    margin-bottom: 10px;
-    font-size: 12px;
-    text-align: center;
-    letter-spacing: 4px;
-
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
 }
 
-.botaoChat{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: #4d4d4d;
+.BoxMain {
+    display: flex;
+    height: auto;
+    width: 100%;
+    max-width: 900px;
+}
+
+.Texto01 {
+    font-family: 'HelveticaBold', sans-serif;
+    color: #385723;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    height: auto;
+}
+
+.Texto02 {
+    font-family: 'HelveticaBold', sans-serif;
+    color: #385723;
+    font-size: 18px;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.Texto03 {
+    font-family: 'HelveticaBold', sans-serif;
+    color: #385723;
+    font-size: 18px;
+    margin-top: 0;
+    margin-left: 0;
+    padding-top: 30px;
+}
+
+.Chat {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    font-size: 18px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: none;
+    width: 500px;
+    height: 35px;
+    border-radius: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 500px;
 }
 
-.CaixaTextoDecorativa{
-    background-color: #101010;
+.ModeloTexto {
+    height: auto;
+    width: 700px;
+    padding-top: 30px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+.logo {
+    width: 140px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.CaixaTextoDecorativa {
+    background-color: #ffffff;
+    display: flex;
+    height: max-content;
+    width: max-content;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+    height: 500px;
+    width: 100%;
+}
+
+.procuraVideos {
+    font-family: 'HelveticaBold', sans-serif;
+    font-size: 16px;
+    height: auto;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-top: 20px;
+    background-color: #D9D9D9;
+    border: none;
+    height: 30px;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.CaixaTextoDecorativa0 {
+    background-color: #E7E6E6;
     box-shadow: 0 0 0 0.5px #4d4d4d;
     display: flex;
+    height: 400px;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Efeito01 {
     height: 300px;
-    width: 250px;
-    color: white;
-    margin-bottom: 10px;
-    font-size: 12px;
-    margin-left: 80px;
-
-}
-
-.CaixaTextoDecorativa0{
-    background-color: #101010;
-    box-shadow: 0 0 0 0.5px #4d4d4d;
-    display: flex;
-    height: 150px;
-    width: 450px;
-    color: white;
-    margin-bottom: 10px;
-    font-size: 12px;
-    display: flex;
-    margin-left: 1100px;
-    margin-top: 20px;
-
-
-
-}
-
-.textoExcel{
-    font-family: 'Helvetica';
-    color: #dcdcdc;
-    margin-bottom: 10px;
-    text-align: left;
-    padding: 11px;
-    line-height: 1.8;
-    font-size: 12px;
-    height: 200px;
     width: 300px;
-    margin-right: -120px;
+    position: relative;
+    z-index: 20;
 }
 
-.textoExcel1{
-    font-family: 'Helvetica';
-    color: #dcdcdc;
-    text-align: left;
-    padding: 11px;
-    line-height: 1.8;
-    font-size: 12px;
-    height: 100px;
-    width: 150px;
-    margin-top: 200px;
-}
-
-.textoExcel01{
-    font-family: 'Helvetica';
-    color: #dcdcdc;
-    text-align: left;
-    padding: 11px;
-    line-height: 1.8;
-    font-size: 12px;
-    width: 450px;
-    height: 75px;
-
-
-}
-
-.textoExcel02{
-    font-family: 'Helvetica';
-    color: #dcdcdc;
-    text-align: left;
-    padding: 11px;
-
-    line-height: 1.8;
-    font-size: 12px;
-    width: 300px;
-    height: 75px;
-    margin-top: 75x;
-}
-
-.chatContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-height: 300px;
-    overflow-y: auto;
-    padding: 10px;
-    background-color: #202020;
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.message {
-    background-color: #4d4d4d;
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
-    max-width: 80%;
-}
-
-.userMessage {
-    align-self: flex-end;
-    background-color: #6c9eff;
-}
-
-.backendMessage {
-    align-self: flex-start;
-    background-color: #4d4d4d;
-}
-
-/* Adsaopkmdapsojdsaopdd´psakdopasjd pdsajndoiuasbndiask dousabdoia blas blas

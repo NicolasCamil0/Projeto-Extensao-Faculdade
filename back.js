@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatContainer = document.querySelector(".chatContainer .mensagens"); 
     const button = document.querySelector(".inputArea button"); 
     
-    // hahahahaha
     const apiBase = window.location.hostname.includes("localhost")
         ? "http://localhost:8080"
         : "https://projeto-extensao-faculdade.onrender.com";
@@ -14,15 +13,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         adicionarMensagem(texto, "userMessage");
 
-        
+        console.log(`Fazendo requisição para: ${apiBase}/excel/pergunta?texto=${encodeURIComponent(texto)}`);
+
+        const carregandoMensagem = adicionarMensagem("Carregando...", "botMessage");
+
         fetch(`${apiBase}/excel/pergunta?texto=${encodeURIComponent(texto)}`)
             .then(response => response.text())
             .then(resposta => {
-                adicionarMensagem(resposta, "botMessage");
+                carregandoMensagem.innerHTML = converterMarkdownParaHTML(resposta);
             })
             .catch(error => {
-                console.error("Erro:", error);
-                adicionarMensagem("Erro ao buscar resposta.", "botMessage");
+                console.error("Erro na requisição:", error);
+                carregandoMensagem.innerHTML = "Erro ao buscar resposta do servidor.";
             });
 
         input.value = ""; 
@@ -34,10 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
         divMensagem.innerHTML = converterMarkdownParaHTML(mensagem); 
         chatContainer.appendChild(divMensagem);
         chatContainer.scrollTop = chatContainer.scrollHeight;
+        return divMensagem; 
     }
 
     function converterMarkdownParaHTML(texto) {
-        return texto.replace(/\n/g, '<br>');
+        return texto
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')  
+            .replace(/\*(.*?)\*/g, '<em>$1</em>')              
+            .replace(/\n/g, '<br>');                           
     }
 
     input.addEventListener("keydown", function (event) {
