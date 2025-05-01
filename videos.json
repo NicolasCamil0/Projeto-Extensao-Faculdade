@@ -1,0 +1,350 @@
+[
+    {
+        "id": "9OIWw2h7al0",
+        "title": "Excel #001 | Curso completo e gratuito"
+    },
+    {
+        "id": "b56kgjLkroA",
+        "title": "Excel #002 | Criando, Salvando, Fechando e Abrindo um arquivo"
+    },
+    {
+        "id": "1EQIg_32Zlc",
+        "title": "Excel #003 | Criando novas abas de planilhas"
+    },
+    {
+        "id": "eMburhOSkBk",
+        "title": "Excel #004 | Excluindo abas de planilhas"
+    },
+    {
+        "id": "U0BrWAT9yr8",
+        "title": "Excel #005 | Renomeando abas de planilhas"
+    },
+    {
+        "id": "_VUN6Acnjto",
+        "title": "Excel #006 | Movendo ou copiando abas de planilhas"
+    },
+    {
+        "id": "q1GwZSZIMW0",
+        "title": "Excel #007 | Alterando as cores das abas de planilhas"
+    },
+    {
+        "id": "RjmuwG1dOl4",
+        "title": "Excel #008 | Ocultando e reexibindo abas de planilhas"
+    },
+    {
+        "id": "VCZYVDHxgjk",
+        "title": "Excel #009 | Ocultando e reexibindo linhas e colunas"
+    },
+    {
+        "id": "4wDh4X-T3Qs",
+        "title": "Excel #010 | Alterando a altura e a largura das células"
+    },
+    {
+        "id": "txZL8yHI7cY",
+        "title": "Excel #011 | Mesclando e separando células"
+    },
+    {
+        "id": "ZHeorjbxT5w",
+        "title": "Excel #012 | Inserindo e excluindo linhas e colunas"
+    },
+    {
+        "id": "mP0oKH2XfLs",
+        "title": "Excel #013 | Definindo as bordas das células selecionadas"
+    },
+    {
+        "id": "S_e0AZJWfDU",
+        "title": "Excel #014 | Desenhando e apagando as bordas"
+    },
+    {
+        "id": "JDAXS--OQIQ",
+        "title": "Excel #015 | Ajustando o sombreamento das células"
+    },
+    {
+        "id": "0iwwqTFqnzA",
+        "title": "Excel #016 | Ajustando o estilo dos textos"
+    },
+    {
+        "id": "x_F3h3a_iUQ",
+        "title": "Excel #017 | Alinhando os textos   parte 1"
+    },
+    {
+        "id": "MjO-gf5bwM4",
+        "title": "Excel #018 | Alinhando os textos   parte 2"
+    },
+    {
+        "id": "FqXSvo4-IsA",
+        "title": "Excel #019 | Alinhando os textos   parte 3"
+    },
+    {
+        "id": "PAExg-JjWBc",
+        "title": "Excel #020 | Copiando a formatação"
+    },
+    {
+        "id": "K6pUgyqQfZs",
+        "title": "Excel #021 |  Formatando dados como tabelas"
+    },
+    {
+        "id": "-VQgcBchOyU",
+        "title": "Excel #022 |  Definindo, congelando e descongelando paineis"
+    },
+    {
+        "id": "fV5B2wVJmHU",
+        "title": "Excel #023 |  Classificando tabelas por colunas"
+    },
+    {
+        "id": "DimAcJY_k7Y",
+        "title": "Excel #024 |  Filtrando tabelas"
+    },
+    {
+        "id": "Yo20yKMvlII",
+        "title": "Excel #025 |  Associando, alterando e removendo hyperlinks"
+    },
+    {
+        "id": "EfDVOBtgQfA",
+        "title": "Excel #026 |  Formatação de valores   Geral"
+    },
+    {
+        "id": "AhpFl9WIq5M",
+        "title": "Excel #027 |  Formatação de valores   Número"
+    },
+    {
+        "id": "0eYcwvFnLsw",
+        "title": "Excel #028 |  Formatação de Valores   Moeda"
+    },
+    {
+        "id": "Gsb2Vg83oMs",
+        "title": "Excel #029 |  Formatação de Valores   Contábil"
+    },
+    {
+        "id": "HseFXx3cDxU",
+        "title": "Excel #030 |  Formatação de Valores   Data Abreviada"
+    },
+    {
+        "id": "LKzgpVoiGRg",
+        "title": "Excel #031 |  Formatação de Valores   Data Completa"
+    },
+    {
+        "id": "VXdNuVotIZc",
+        "title": "Excel #032 |  Formatação de Valores   Hora"
+    },
+    {
+        "id": "uJYY6spIpYA",
+        "title": "Excel #033 |  Formatação de Valores   Porcentagem"
+    },
+    {
+        "id": "rVxz3Zjqodc",
+        "title": "Excel #034 |  Formatação de Valores   Fração"
+    },
+    {
+        "id": "T78qkN5IW9c",
+        "title": "Excel #035 |  Formatação de Valores   Científico"
+    },
+    {
+        "id": "xSA1UsY6rAU",
+        "title": "Excel #036 |  Formatação de Valores   Texto"
+    },
+    {
+        "id": "ahABvvA_UyU",
+        "title": "Excel #037 |  Formatações Rápidas e Práticas de Valores"
+    },
+    {
+        "id": "GV7XNtYsM2s",
+        "title": "Excel #038 |  Outras formatações especiais"
+    },
+    {
+        "id": "_mVcACWzkkQ",
+        "title": "Excel #039 |  Aplicando Estilos Padrões de Células"
+    },
+    {
+        "id": "6ClC1ornj3w",
+        "title": "Excel #040 |  Alterando um estilo de célula existente"
+    },
+    {
+        "id": "XNcabmJUC28",
+        "title": "Excel #041 |  Criando seu Próprio Estilo de Célula"
+    },
+    {
+        "id": "uRK6ws6zD7w",
+        "title": "Excel #042 |  Limpando uma região da planilha"
+    },
+    {
+        "id": "qeXIOskq3rM",
+        "title": "Excel #043 |  Protegendo e desprotegendo pastas e planilhas"
+    },
+    {
+        "id": "QRcB-smljlk",
+        "title": "Excel #044 |  Bloqueando e desbloqueando células"
+    },
+    {
+        "id": "oO9a3v3VvPk",
+        "title": "Excel #045 |  Trabalhando com Comentários"
+    },
+    {
+        "id": "fUWiMGZMEsI",
+        "title": "Excel #046 |  Calculando uma contagem de valores não nulos"
+    },
+    {
+        "id": "FPvgwMV3uyw",
+        "title": "Excel #047 |  Calculando uma soma"
+    },
+    {
+        "id": "f0DoT3io-zA",
+        "title": "Excel #048 |  Calculando uma média aritmética simples"
+    },
+    {
+        "id": "VW9TJ-C7hcU",
+        "title": "Excel #049 |  Calculando os valores máximos e mínimos"
+    },
+    {
+        "id": "HKFVH1NFzwY",
+        "title": "Excel #050 |  Operações Matemáticas   Soma"
+    },
+    {
+        "id": "wTHYzpGWK0g",
+        "title": "Excel #051 |  Operações Matemáticas   Subtração"
+    },
+    {
+        "id": "GrQmBCt1Gg4",
+        "title": "Excel #052 |  Operações Matemáticas   Multiplicação"
+    },
+    {
+        "id": "oEFxVdrCZ5c",
+        "title": "Excel #053 |  Operações Matemáticas   Divisão"
+    },
+    {
+        "id": "4sx-mG31aJg",
+        "title": "Excel #054 |  Operações Matemáticas   Raiz Quadrada"
+    },
+    {
+        "id": "BA4p3KpdCsU",
+        "title": "Excel #055 |  Operações Matemáticas   Potenciação"
+    },
+    {
+        "id": "HhPavr4Kn1I",
+        "title": "Excel #056 |  Combinando Várias Operações Matemáticas"
+    },
+    {
+        "id": "UN2d1MY8mWw",
+        "title": "Excel #057 |  Apontando valores de outras planilhas"
+    },
+    {
+        "id": "FGZQwZeBZ0E",
+        "title": "Excel #058 |  Preenchendo valores em série automaticamente"
+    },
+    {
+        "id": "9BLQDU892fw",
+        "title": "Excel #059 |  Usando células constantes no preenchimento em série"
+    },
+    {
+        "id": "-t7GlXidq70",
+        "title": "Excel #060 |  Apelidando uma célula para facilitar o seu uso"
+    },
+    {
+        "id": "UcF53GMHGw0",
+        "title": "Excel #061 |  Copiando e colando os valores e imagem das células selecionadas"
+    },
+    {
+        "id": "eDxtBgCWuZE",
+        "title": "Excel #062 |  Opções avançadas de colagem"
+    },
+    {
+        "id": "1NRr3t4xER4",
+        "title": "Excel #063 |  Utilizando o assistente de colagem de textos"
+    },
+    {
+        "id": "gxJZnNfBTLY",
+        "title": "Excel #064 |  Localizando e substituindo valores na planilha"
+    },
+    {
+        "id": "vvqFWupccX0",
+        "title": "Excel #065 |  Formatação Condicional   Realçar Regras"
+    },
+    {
+        "id": "lWo4Bin6vTE",
+        "title": "Excel #066 |  Formatação Condicional   Primeiros e Últimos"
+    },
+    {
+        "id": "GLGAJlKfl2w",
+        "title": "Excel #067 |  Formatação Condicional   Barras de dados"
+    },
+    {
+        "id": "q_X-pR5Xf1w",
+        "title": "Excel #068 |  Formatação Condicional   Escalas de cores"
+    },
+    {
+        "id": "Fkh2QFJTNFo",
+        "title": "Excel #069 |  Formatação Condicional   Conjunto de Ícones"
+    },
+    {
+        "id": "IDCut0TP-CE",
+        "title": "Excel #070 |  Formatação Condicional   Criando e gerenciando regras"
+    },
+    {
+        "id": "TSHgomnhKbw",
+        "title": "Excel #071 |  Salvando uma planilha como arquivo PDF"
+    },
+    {
+        "id": "lFr7DQcQ0v8",
+        "title": "Excel #072 |  Salvando uma planilha como texto delimitado"
+    },
+    {
+        "id": "SV3EpHfshy8",
+        "title": "Excel #073 |  Abrindo um arquivo delimitado"
+    },
+    {
+        "id": "pXpQ7WvjRlU",
+        "title": "Excel #074 |  Separar os textos em colunas usando um delimitador"
+    },
+    {
+        "id": "EpzyqhKf0YY",
+        "title": "Excel #075 |  Definindo ou excluindo a imagem do plano de fundo"
+    },
+    {
+        "id": "hJEoyufCplc",
+        "title": "Excel #076 |  Inserindo imagens"
+    },
+    {
+        "id": "A0dms_q-SHU",
+        "title": "Excel #077 |  Inserindo arquivos PDF e outros"
+    },
+    {
+        "id": "uKLNh5GYWKk",
+        "title": "Excel #078 |  Inserindo e formatando formas"
+    },
+    {
+        "id": "-TxvhUf8sEs",
+        "title": "Excel #079 |  Ordenando objetos"
+    },
+    {
+        "id": "Yqr_0foWA64",
+        "title": "Excel #080 |  Alinhando objetos"
+    },
+    {
+        "id": "l1fYAVgoHf8",
+        "title": "Excel #081 |  Agrupando e desagrupando objetos"
+    },
+    {
+        "id": "g2fxSz1mBNw",
+        "title": "Excel #082 |  Ajustando, espelhando e compactando imagens"
+    },
+    {
+        "id": "Of44L9Hao4c",
+        "title": "Excel #083 |  Substituindo uma imagem por outra"
+    },
+    {
+        "id": "MHSvA9KJGSo",
+        "title": "Excel #084 |  Recortando uma imagem"
+    },
+    {
+        "id": "rqwxvghn6us",
+        "title": "Excel #085 |  Voltando a imagem para seu formato original"
+    },
+    {
+        "id": "AcAfc0n1nJc",
+        "title": "Excel #086 |  Controlando a medida exata da imagem"
+    },
+    {
+        "id": "UZSPS6FdT44",
+        "title": "Excel #087 | Concatenando juntando textos de várias células"
+    }
+]

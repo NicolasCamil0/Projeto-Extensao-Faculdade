@@ -9,9 +9,11 @@
 
 <body>    
     <div class="caixa"> 
-        <ul>
-            <a href=""><img src="imgs/ExcelifyIMG.png" alt="LogoExcelify" class="logo"></a>
-        </ul>
+       <a href=""><img src="imgs/ExcelifyIMG.png" alt="LogoExcelify" class="logo"></a>
+       <div class="DireitaHaha">
+           <a href="pag2.html" class="TextoHeader">CHAT</a>
+           <a href="#" class="TextoHeader">SOBRE</a>
+       </div>
     </div>
 
     <div class="CaixaTextoDecorativa0">
@@ -20,8 +22,14 @@
                 <h1 class="Texto01">TRANSFORMANDO SEUS DADOS EM IDEIAS</h1>
                 <p class="Texto02">Aqui, você recebe dicas práticas, fáceis de entender e perfeitas para <br> resolver seus desafios no dia a dia com planilhas.</p>
                 <p class="Texto03">Experimente já nosso chat</p>
-                <input type="text" class="Chat" placeholder="" id="chatInput">
-                <div class="EfeitoImagem01"><img src="imgs/Effect01.png" alt="" class="Efeito01"></div>
+
+                <div class="animacaoChat">
+                    <div class="sugestao">"Como criar uma tabela dinâmica?"</div>
+                    <div class="sugestao">"Mostre funções avançadas do Excel"</div>
+                    <div class="sugestao">"Como automatizar relatórios?"</div>
+                </div>
+
+                <input type="text" class="Chat" placeholder="Deixe sua dúvida aqui!" id="chatInput">
             </div>
         </div>
        <div class="ExcelImage">
@@ -30,16 +38,17 @@
     </div>
     <main>
         <div class="CaixaTextoDecorativa">
-            <div>
-                <input type="search" placeholder="Pesquisar..." class="procuraVideos">
+            <div class="ConteinerProcuraVideos">
+                <input type="search" placeholder="Pesquise videos..." class="procuraVideos">
             </div>
         </div>
+    </div><div class="playlistvideo" id="playlist"></div>
     </main>
 
     <script>
         document.getElementById('chatInput').addEventListener('keypress', function(event) {
             if (event.key === 'Enter') {
-                window.location.href = "pag2.html";  // Redireciona para a página do chat
+                window.location.href = "pag2.html"; 
             }
         });
     </script>
