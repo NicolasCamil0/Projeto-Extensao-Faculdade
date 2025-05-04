@@ -85,13 +85,13 @@ body {
 
 .historico {
   width: 300px;
-  background-color: #1a1a1a;
+  background-color: darkolivegreen;
   border-left: 1px solid #333;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgb(255, 255, 255);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  
 }
 
 .historico h2 {
@@ -223,18 +223,18 @@ body {
 
 .menuLinks {
   display: flex;
-  flex-direction: column;
- 
-  padding: 4px;
+  margin-bottom: 30px;
   text-align: left;
 }
+
+
 
 .linkMenu {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   transition: background-color 0.2s ease;
   animation: fadeInUp 0.5s ease forwards;
@@ -257,7 +257,7 @@ body {
 
 .tituloDicas {
   margin: 16px 8px 8px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 
@@ -267,7 +267,7 @@ body {
 }
 
 .dicasLista li {
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 6px;
   border-radius: 6px;
   cursor: pointer;

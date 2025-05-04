@@ -226,3 +226,47 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const input = document.getElementById("chatInput");
+    const chatBox = document.getElementById("chatBox");
+    const chatContainer = document.getElementById("chatContainer");
+    const mainContent = document.getElementById("mainContent");
+  
+    input.addEventListener("keypress", function(event) {
+      if (event.key === "Enter" && input.value.trim() !== "") {
+        const mensagem = input.value.trim();
+  
+        // Mostra o chatBox se estiver escondido
+        if (chatBox.classList.contains("hidden")) {
+          chatBox.classList.remove("hidden");
+          chatBox.style.display = "block";
+          
+          // Ajusta o padding do container para acomodar o chat
+          chatContainer.style.paddingBottom = "40px";
+        }
+  
+        // Adiciona mensagem do usuário
+        const userMsg = document.createElement("div");
+        userMsg.classList.add("message", "user");
+        userMsg.textContent = `Você: ${mensagem}`;
+        chatBox.appendChild(userMsg);
+  
+        // Adiciona resposta do bot
+        const botMsg = document.createElement("div");
+        botMsg.classList.add("message", "bot");
+        botMsg.textContent = `Bot: Recebido! Estamos analisando sua dúvida sobre "${mensagem}".`;
+        chatBox.appendChild(botMsg);
+  
+        // Rolagem automática e limpeza do input
+        chatBox.scrollTop = chatBox.scrollHeight;
+        input.value = "";
+  
+        // Ajusta o espaçamento após adicionar mensagens
+        setTimeout(() => {
+          const chatBoxHeight = chatBox.offsetHeight;
+          mainContent.style.marginTop = `${chatBoxHeight + 30}px`;
+        }, 10);
+      }
+    });
+  });
+

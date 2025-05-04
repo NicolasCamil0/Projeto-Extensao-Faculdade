@@ -75,6 +75,12 @@ body {
     
 }
 
+.content-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
 .caixa {
     display: flex;
     background-color: #ffffff;
@@ -185,6 +191,41 @@ body {
 
 }
 
+.chat-box {
+    display: none; 
+    margin: 20px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    max-height: 250px;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.chat-box:not(.hidden) {
+    display: block;
+  }
+
+.message {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+.message.user {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+.message.bot {
+    color: #555;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
 
 .animacaoChat {
     position: relative;
@@ -204,8 +245,8 @@ body {
 .ModeloTexto {
     height: auto;
     width: 700px; 
-    padding-top: 30px;
-    margin-left: 30px; 
+    padding: 15px;
+    margin-left: 10px; 
     text-align: left; 
 
 }
@@ -223,9 +264,11 @@ body {
     width: max-content;
     box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
-    z-index: 10;
     height: 500px;
     width: 100%;
+    min-height: auto; 
+    padding-bottom: 30px; 
+    overflow: visible; 
     
 
 }
@@ -248,13 +291,12 @@ body {
 
 .CaixaTextoDecorativa0{
     background-color: #E7E6E6;
-    box-shadow: 0 0 0 0.5px #4d4d4d;
-    display: flex;
-    height: 400px;
-    color: white;
-    font-size: 12px;
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  min-height: 400px; 
+  width: 100%;
+  position: relative;
 }
 
 
@@ -357,9 +399,10 @@ body {
 
 .BoxMain {
     display: flex;
-    height: auto;
+    flex-direction: column;
     width: 100%;
     max-width: 900px;
+   
 }
 
 .Texto01 {
@@ -404,14 +447,6 @@ body {
     align-items: center;
     width: 80%;
     max-width: 500px;
-}
-
-.ModeloTexto {
-    height: auto;
-    width: 700px;
-    padding-top: 30px;
-    margin-left: 30px;
-    text-align: left;
 }
 
 .logo {
@@ -484,7 +519,7 @@ body {
     width: 100%; 
     height: 100%;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    background-color: #4d4d4d;
+    background-color: #3a4731;
     
 }
   

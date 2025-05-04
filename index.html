@@ -1,58 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excelify</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 
-<body>    
-    <div class="caixa"> 
-       <a href=""><img src="imgs/ExcelifyIMG.png" alt="LogoExcelify" class="logo"></a>
-       <div class="DireitaHaha">
-           <a href="pag2.html" class="TextoHeader">CHAT</a>
-           <a href="#" class="TextoHeader">SOBRE</a>
-       </div>
+<body>
+  <div class="caixa">
+    <a href=""><img src="imgs/ExcelifyIMG.png" alt="LogoExcelify" class="logo" /></a>
+    <div class="DireitaHaha">
+      <a href="#" class="TextoHeader">CHAT</a>
+      <a href="#" class="TextoHeader">SOBRE</a>
+    </div>
+  </div>
+
+  <div class="CaixaTextoDecorativa0" id="chatContainer">
+    <div class="BoxMain">
+      <div class="ModeloTexto">
+        <h1 class="Texto01">TRANSFORMANDO SEUS DADOS EM IDEIAS</h1>
+        <p class="Texto02">
+          Aqui, você recebe dicas práticas, fáceis de entender e perfeitas para <br />
+          resolver seus desafios no dia a dia com planilhas.
+        </p>
+        <p class="Texto03">Experimente já nosso chat</p>
+
+        <div class="animacaoChat">
+          <div class="sugestao">"Como criar uma tabela dinâmica?"</div>
+          <div class="sugestao">"Mostre funções avançadas do Excel"</div>
+          <div class="sugestao">"Como automatizar relatórios?"</div>
+        </div>
+
+        <input type="text" class="Chat" placeholder="Deixe sua dúvida aqui!" id="chatInput" />
+
+        <div id="chatBox" class="chat-box hidden"></div>
+      </div>
     </div>
 
-    <div class="CaixaTextoDecorativa0">
-        <div class="BoxMain">
-            <div class="ModeloTexto">
-                <h1 class="Texto01">TRANSFORMANDO SEUS DADOS EM IDEIAS</h1>
-                <p class="Texto02">Aqui, você recebe dicas práticas, fáceis de entender e perfeitas para <br> resolver seus desafios no dia a dia com planilhas.</p>
-                <p class="Texto03">Experimente já nosso chat</p>
-
-                <div class="animacaoChat">
-                    <div class="sugestao">"Como criar uma tabela dinâmica?"</div>
-                    <div class="sugestao">"Mostre funções avançadas do Excel"</div>
-                    <div class="sugestao">"Como automatizar relatórios?"</div>
-                </div>
-
-                <input type="text" class="Chat" placeholder="Deixe sua dúvida aqui!" id="chatInput">
-            </div>
-        </div>
-       <div class="ExcelImage">
-            <img src="imgs/logo-microsoft-excel-1024.png" alt="ExcelImage" class="imagemExcel">
-        </div>
+    <div class="ExcelImage">
+      <img src="imgs/logo-microsoft-excel-1024.png" alt="ExcelImage" class="imagemExcel" />
     </div>
-    <main>
-        <div class="CaixaTextoDecorativa">
-            <div class="ConteinerProcuraVideos">
-                <input type="search" placeholder="Pesquise videos..." class="procuraVideos">
-            </div>
-        </div>
-    </div><div class="playlistvideo" id="playlist"></div>
-    </main>
+  </div>
 
-    <script>
-        document.getElementById('chatInput').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                window.location.href = "pag2.html"; 
-            }
-        });
-    </script>
+  <main id="mainContent">
+    <div class="CaixaTextoDecorativa">
+      <div class="ConteinerProcuraVideos">
+        <input type="search" placeholder="Pesquise vídeos..." class="procuraVideos" />
+      </div>
+    </div>
+    <div class="playlistvideo" id="playlist"></div>
+  </main>
 
-    <script src="back.js"></script>
+  <script src="back.js"></script>
 </body>
 </html>
