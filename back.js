@@ -1,43 +1,80 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const input = document.querySelector("input[type='text']"); 
-    const chatContainer = document.querySelector(".chatContainer .mensagens"); 
-    const button = document.querySelector(".inputArea button"); 
+document.addEventListener("DOMContentLoaded", function() {
+
+    const input = document.getElementById("chatInput");
+    const chatBox = document.getElementById("chatBox");
+    const chatContainer = document.getElementById("chatContainer");
+    const mainContent = document.getElementById("mainContent");
     
+
     const apiBase = window.location.hostname.includes("localhost")
         ? "http://localhost:8080"
         : "https://projeto-extensao-faculdade.onrender.com";
 
-    button.addEventListener("click", function () {
+
+    function enviarMensagem() {
         const texto = input.value.trim();
-        if (texto === "") return; 
+        if (texto === "") return;
 
-        adicionarMensagem(texto, "userMessage");
 
-        console.log(`Fazendo requisição para: ${apiBase}/excel/pergunta?texto=${encodeURIComponent(texto)}`);
+        if (chatBox.classList.contains("hidden")) {
+            chatBox.classList.remove("hidden");
+            chatBox.style.display = "block";
+            chatContainer.style.paddingBottom = "40px";
+        }
 
-        const carregandoMensagem = adicionarMensagem("Carregando...", "botMessage");
+
+        adicionarMensagem(`Você: ${texto}`, "user");
+
+
+        const carregandoMsg = adicionarMensagem("Bot: Digitando...", "bot typing");
+
 
         fetch(`${apiBase}/excel/pergunta?texto=${encodeURIComponent(texto)}`)
             .then(response => response.text())
             .then(resposta => {
-                carregandoMensagem.innerHTML = converterMarkdownParaHTML(resposta);
+                chatBox.removeChild(carregandoMsg);
+                adicionarMensagem(`Bot: ${resposta}`, "bot");
             })
             .catch(error => {
                 console.error("Erro na requisição:", error);
-                carregandoMensagem.innerHTML = "Erro ao buscar resposta do servidor.";
+                chatBox.removeChild(carregandoMsg);
+                adicionarMensagem("Bot: Erro ao conectar com o servidor. Tente novamente mais tarde.", "bot error");
             });
 
-        input.value = ""; 
-    });
-
-    function adicionarMensagem(mensagem, classe) {
-        const divMensagem = document.createElement("div");
-        divMensagem.classList.add("message", classe);
-        divMensagem.innerHTML = converterMarkdownParaHTML(mensagem); 
-        chatContainer.appendChild(divMensagem);
-        chatContainer.scrollTop = chatContainer.scrollHeight;
-        return divMensagem; 
+        input.value = "";
+        ajustarLayout();
     }
+
+
+    function adicionarMensagem(texto, tipo) {
+        const divMsg = document.createElement("div");
+        divMsg.classList.add("message", tipo.split(" ")[0]);
+        divMsg.innerHTML = converterMarkdownParaHTML(texto);
+        chatBox.appendChild(divMsg);
+        
+        
+        if (chatBox.querySelectorAll('.message').length === 1) {
+            chatBox.style.height = "500px"; // 
+        }
+        
+        
+        chatBox.scrollTop = chatBox.scrollHeight;
+        
+        return divMsg;
+    }
+
+
+    function ajustarLayout() {
+        setTimeout(() => {
+            const chatBoxHeight = chatBox.scrollHeight;
+            const alturaMaxima = window.innerHeight * 0.7;
+            chatBox.style.height = `${Math.min(chatBoxHeight, alturaMaxima)}px`;
+            mainContent.style.marginTop = `${chatBox.offsetHeight + 30}px`;
+            chatContainer.style.paddingBottom = "40px";
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }, 10);
+    }
+
 
     function converterMarkdownParaHTML(texto) {
         return texto
@@ -48,20 +85,53 @@ document.addEventListener("DOMContentLoaded", function () {
             .replace(/\*(.*?)\*/g, '<em>$1</em>')
             .replace(/\n/g, '<br>');
     }
-''
-    input.addEventListener("keydown", function (event) {
+
+    input.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
-            button.click(); 
+            enviarMensagem();
         }
     });
-});
+
+ 
+    document.querySelectorAll('.sugestao').forEach(sugestao => {
+        sugestao.addEventListener('click', function() {
+            input.value = this.textContent.replace(/"/g, '');
+            input.focus();
+        });
+    });
 
 
-document.addEventListener("DOMContentLoaded", function() {
+    const placeholderTexts = [
+        "Deixe sua dúvida aqui!",
+        "Como criar gráficos?",
+        "Fórmulas avançadas",
+        "Automatizar planilhas"
+    ];
+    let currentIndex = 0;
+    
+    function rotatePlaceholder() {
+        input.placeholder = placeholderTexts[currentIndex];
+        currentIndex = (currentIndex + 1) % placeholderTexts.length;
+    }
+    
+    let placeholderInterval = setInterval(rotatePlaceholder, 3000);
+    
+    input.addEventListener('focus', function() {
+        clearInterval(placeholderInterval);
+        this.placeholder = "Digite sua dúvida...";
+    });
+    
+    input.addEventListener('blur', function() {
+        if (this.value === '') {
+            placeholderInterval = setInterval(rotatePlaceholder, 3000);
+            rotatePlaceholder();
+        }
+    });
+
+
     const searchInput = document.querySelector('.procuraVideos');
     const playlist = document.querySelector('.playlistvideo');
     let allVideos = [];
-
 
     fetch('videos.json')
         .then(response => response.json())
@@ -73,7 +143,6 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error("Erro ao carregar vídeos:", error);
             playlist.innerHTML = '<p class="error">Erro ao carregar a base de vídeos</p>';
         });
-
 
     function showInitialVideos() {
         playlist.innerHTML = '';
@@ -95,7 +164,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
- 
     function searchVideos(searchTerm) {
         playlist.innerHTML = '';
         
@@ -113,12 +181,10 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-
         filteredVideos.forEach((video, index) => {
             const videoContainer = document.createElement('div');
             videoContainer.className = 'video-container';
             
-          
             const shouldLazyLoad = index > 3;
             
             videoContainer.innerHTML = `
@@ -134,11 +200,9 @@ document.addEventListener("DOMContentLoaded", function() {
             playlist.appendChild(videoContainer);
         });
 
-     
         setupLazyLoading();
     }
 
-   
     function setupLazyLoading() {
         const lazyIframes = document.querySelectorAll('iframe[data-src]');
         
@@ -156,7 +220,6 @@ document.addEventListener("DOMContentLoaded", function() {
         lazyIframes.forEach(iframe => observer.observe(iframe));
     }
 
-
     let searchTimeout;
     searchInput.addEventListener('input', function(e) {
         clearTimeout(searchTimeout);
@@ -171,102 +234,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    
-    const suggestions = document.querySelectorAll('.suggestion');
-    const chatInput = document.getElementById('chatInput');
-    
-    
-    suggestions.forEach(suggestion => {
-        suggestion.addEventListener('click', function() {
-            chatInput.value = this.textContent;
-            chatInput.focus();
-        });
-    });
-    
-
-    chatInput.addEventListener('focus', function() {
-        document.querySelector('.chat-suggestions').style.opacity = '0.5';
-    });
-    
-    chatInput.addEventListener('blur', function() {
-        document.querySelector('.chat-suggestions').style.opacity = '1';
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const chatInput = document.getElementById('chatInput');
-    const placeholderTexts = [
-        "Deixe sua dúvida aqui!",
-        "Como criar gráficos?",
-        "Fórmulas avançadas",
-        "Automatizar planilhas"
-    ];
-    let currentIndex = 0;
-    
-    function rotatePlaceholder() {
-        chatInput.placeholder = placeholderTexts[currentIndex];
-        currentIndex = (currentIndex + 1) % placeholderTexts.length;
-    }
-    
-    let placeholderInterval = setInterval(rotatePlaceholder, 3000);
-    
-
-    chatInput.addEventListener('focus', function() {
-        clearInterval(placeholderInterval);
-        this.placeholder = "Digite sua dúvida...";
-    });
-    
- 
-    chatInput.addEventListener('blur', function() {
-        if (this.value === '') {
-            placeholderInterval = setInterval(rotatePlaceholder, 3000);
-            rotatePlaceholder(); 
-        }
-    });
-});
-document.addEventListener("DOMContentLoaded", function() {
-    const input = document.getElementById("chatInput");
-    const chatBox = document.getElementById("chatBox");
-    const chatContainer = document.getElementById("chatContainer");
-    const mainContent = document.getElementById("mainContent");
-  
-    input.addEventListener("keypress", function(event) {
-      if (event.key === "Enter" && input.value.trim() !== "") {
-        const mensagem = input.value.trim();
-  
-        // Mostra o chatBox se estiver escondido
-        if (chatBox.classList.contains("hidden")) {
-          chatBox.classList.remove("hidden");
-          chatBox.style.display = "block";
-          
-          // Ajusta o padding do container para acomodar o chat
-          chatContainer.style.paddingBottom = "40px";
-        }
-  
-        // Adiciona mensagem do usuário
-        const userMsg = document.createElement("div");
-        userMsg.classList.add("message", "user");
-        userMsg.textContent = `Você: ${mensagem}`;
-        chatBox.appendChild(userMsg);
-  
-        // Adiciona resposta do bot
-        const botMsg = document.createElement("div");
-        botMsg.classList.add("message", "bot");
-        botMsg.textContent = `Bot: Recebido! Estamos analisando sua dúvida sobre "${mensagem}".`;
-        chatBox.appendChild(botMsg);
-  
-        // Rolagem automática e limpeza do input
-        chatBox.scrollTop = chatBox.scrollHeight;
-        input.value = "";
-  
-        // Ajusta o espaçamento após adicionar mensagens
-        setTimeout(() => {
-          const chatBoxHeight = chatBox.offsetHeight;
-          mainContent.style.marginTop = `${chatBoxHeight + 30}px`;
-        }, 10);
-      }
-    });
-  });
-
