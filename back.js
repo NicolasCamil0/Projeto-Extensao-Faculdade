@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
             chatContainer.style.paddingBottom = "40px";
             chatBox.scrollTop = chatBox.scrollHeight;
         }, 10);
+        
     }
 
 
